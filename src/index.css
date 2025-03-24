@@ -1,0 +1,22 @@
+:root {
+  --primary-color: #1e3e62;
+  --action-color: #ff6500;
+  --font-color: #0b192c;
+  --background-color: #eeeeee;
+  --primary-font: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--primary-font);
+}
+
+a {
+  text-decoration: none;
+}
