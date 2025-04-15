@@ -1,1 +1,18 @@
+.MainContent {
+  display: flex;
+}
+.AddInfoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 30%;
+  padding: 2rem;
+}
 
+.CVDisplaySection {
+  width: 70%;
+  border: 2px solid var(--primary-color);
+  border-radius: 2rem;
+  margin: 2rem;
+}
