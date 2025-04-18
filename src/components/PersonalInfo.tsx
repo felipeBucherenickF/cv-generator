@@ -1,27 +1,26 @@
 import React from "react";
 import "../styles/AddInfoForms.css";
-import { PersonalInfoData } from "../types/personal-info";
+import { PersonalInfo } from "../types/info";
 
 interface PersonalInfoProps {
   setPersonalInfoDataDisplay: React.Dispatch<
-    React.SetStateAction<PersonalInfoData>
+    React.SetStateAction<PersonalInfo>
   >;
 }
 
-export const PersonalInfo: React.FC<PersonalInfoProps> = ({
+export const PersonalInfoData: React.FC<PersonalInfoProps> = ({
   setPersonalInfoDataDisplay,
 }) => {
-  const [personalInfoData, setPersonalInfoData] =
-    React.useState<PersonalInfoData>({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phoneNumber: "",
-    });
+  const [personalInfoData, setPersonalInfoData] = React.useState<PersonalInfo>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+  });
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    setPersonalInfoData((prevData: PersonalInfoData) => ({
+    setPersonalInfoData((prevData: PersonalInfo) => ({
       ...prevData,
       [name]: value,
     }));
@@ -29,7 +28,7 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
 
   const onSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    setPersonalInfoDataDisplay((prevData: PersonalInfoData) => ({
+    setPersonalInfoDataDisplay((prevData: PersonalInfo) => ({
       ...prevData,
       firstName: personalInfoData.firstName,
       lastName: personalInfoData.lastName,
