@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/CVdisplay.css";
 import { EducationalInfo, PersonalInfo, PracticalInfo } from "../types/info";
 
 export const CVdisplay: React.FC<{
@@ -12,6 +13,9 @@ export const CVdisplay: React.FC<{
 
   return (
     <>
+      <h1 className="CVdisplayTitle">
+        {personalInfoData.firstName} {personalInfoData.lastName}
+      </h1>
       <div className="PersonalInfoDisplay">
         <h3>Personal Information</h3>
         <p>First Name: {personalInfoData.firstName}</p>
